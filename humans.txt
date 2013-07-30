@@ -1,0 +1,38 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Owner & Founder; Developer: Lindsey Campbell
+  Site: www.bitbytemedia.com
+  Twitter: 
+  Facebook: www.facebook.com/bitbytemedia
+
+/* THANKS */
+  Names (& URL): 
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software:
+  
+
+                                    
+BBBBBBBBBBBBBBBBB   BBBBBBBBBBBBBBBBB   MMMMMMMM               MMMMMMMM
+B::::::::::::::::B  B::::::::::::::::B  M:::::::M             M:::::::M
+B::::::BBBBBB:::::B B::::::BBBBBB:::::B M::::::::M           M::::::::M
+BB:::::B     B:::::BBB:::::B     B:::::BM:::::::::M         M:::::::::M
+  B::::B     B:::::B  B::::B     B:::::BM::::::::::M       M::::::::::M
+  B::::B     B:::::B  B::::B     B:::::BM:::::::::::M     M:::::::::::M
+  B::::BBBBBB:::::B   B::::BBBBBB:::::B M:::::::M::::M   M::::M:::::::M
+  B:::::::::::::BB    B:::::::::::::BB  M::::::M M::::M M::::M M::::::M
+  B::::BBBBBB:::::B   B::::BBBBBB:::::B M::::::M  M::::M::::M  M::::::M
+  B::::B     B:::::B  B::::B     B:::::BM::::::M   M:::::::M   M::::::M
+  B::::B     B:::::B  B::::B     B:::::BM::::::M    M:::::M    M::::::M
+  B::::B     B:::::B  B::::B     B:::::BM::::::M     MMMMM     M::::::M
+BB:::::BBBBBB::::::BBB:::::BBBBBB::::::BM::::::M               M::::::M
+B:::::::::::::::::B B:::::::::::::::::B M::::::M               M::::::M
+B::::::::::::::::B  B::::::::::::::::B  M::::::M               M::::::M
+BBBBBBBBBBBBBBBBB   BBBBBBBBBBBBBBBBB   MMMMMMMM               MMMMMMMM
+
+    

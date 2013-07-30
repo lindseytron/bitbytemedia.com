@@ -1,0 +1,23 @@
+/*General sitewide styles*/
+/*IE is a bitch*/
+#container{
+	behavior:url(css/PIE.htc);
+}
+header,#topNav ul,footer{
+	border:none;
+	 -pie-background: linear-gradient(#151515, #000); /*PIE*/
+	behavior:url(css/PIE.htc);
+}
+.subMenu{
+	position:relative;
+	z-index:700;
+}
+#search,#topNav li ul a:hover, #topNav li ul li:hover a,#playSharp,#theFuture,#mainContent,.tuneCore,#mainContentInner,#leftFeaturedInner{
+	border:none;
+	behavior:url(css/PIE.htc);
+}
+#topNav li ul a:hover, #topNav li ul li:hover a{
+	background:url('../img/hoverIE.png') center left no-repeat;
+}
+
+	

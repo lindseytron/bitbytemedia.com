@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>jQuery UI CoverFlow 2.2</title>
+	
+	<!-- Include theme -->
+	<link type="text/css" href="css/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+	<link type="text/css" href="css/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+	<!-- Include jQuery and UI -->
+	<script type="text/javascript" src="js/libs/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-ui-1.8.9.custom.min.js"></script>
+
+		
+	<!-- Include jQuery CoverFlow widget -->
+	<script type="text/javascript" src="js/libs/ui.coverflow.js"></script>
+
+	<link type="text/css" href="css/demos.css" rel="stylesheet" />
+	
+	<!-- Transformie is a plugin that makes webkit's CSS transforms work in Internet Explorer -->
+	<script src="js/libs/sylvester.js" type="text/javascript"></script>
+	<script src="js/libs/transformie.js" type="text/javascript"></script>
+	
+	<!-- Include mousewheel dependancies and app files -->
+	<script src="js/libs/jquery.mousewheel.min.js" type="text/javascript"></script>
+	<script src="js/libs/app.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(function(){	
+
+		
+		var demo = {
+
+			yScroll: function(wrapper, scrollable) {
+
+				var wrapper = $(wrapper), scrollable = $(scrollable),
+					loading = $('<div class="loading">Loading...</div>').appendTo(wrapper),
+					internal = null,
+					images	= null;
+					scrollable.hide();
+					images = scrollable.find('img');
+					completed = 0;
+					
+					images.each(function(){
+						if (this.complete) completed++;	
+					});
+					
+					if (completed == images.length){
+						setTimeout(function(){							
+							loading.hide();
+							wrapper.css({overflow: 'hidden'});						
+							scrollable.slideDown('slow', function(){
+								enable();	
+							});					
+						}, 0);	
+					}
+			
+				
+				function enable(){
+					var inactiveMargin = 99,
+						wrapperWidth = wrapper.width(),
+						wrapperHeight = wrapper.height(),
+						scrollableHeight = scrollable.outerHeight() + 2*inactiveMargin,
+						wrapperOffset = 0,
+						top = 0,
+						lastTarget = null;
+
+					
+					wrapper.mousemove(function(e){
+						lastTarget = e.target;
+						wrapperOffset = wrapper.offset();		
+						top = (e.pageY -  wrapperOffset.top) * (scrollableHeight - wrapperHeight) / wrapperHeight - inactiveMargin;
+						if (top < 0){
+							top = 0;
+						}			
+						wrapper.scrollTop(top);
+					});	
+				}			
+			}
+		}
+
+		
+		demo.yScroll('#scroll-pane', 'ul#sortable');
+
+			
+	});
+	</script>
+	
+
+</head>
+<body>
+
+
+
+<div class="pageWrapper">
+	<h1>jQuery UI CSS3 CoverFlow 2.2 (Preview)</h1>
+	<div class="demo">
+
+		<div class="wrapper">
+			<div id="coverflow">
+	            <img src="img/coverflow/gorillaz-plasticbeach.jpg" data-artist="Gorillaz" data-album="Plastic Beach"/>
+				<img src="img/coverflow/kingsofleon-comearoundsunshine.jpg" data-artist="Kings Of Leon" data-album="Come Around Sunshine"/>
+				<img src="img/coverflow/kidrock-bornfree.jpg" data-artist="Kid Rock" data-album="Born Free"/>		
+				<img src="img/coverflow/recovery-recovery.jpg" data-artist="Eminem" data-album="Recovery"/>
+				<img src="img/coverflow/lilwayne-iamnotahumanbeing.jpg" data-artist="Lil Wayne" data-album="I Am Not A Human Being"/>
+				<img src="img/coverflow/taylorswift-speaknow.jpg" data-artist="Taylor Swift" data-album="Speak Now"/>
+				<img src="img/coverflow/thebandperry-thebandperry.jpg" data-artist="The Band Perry" data-album="The Band Perry"/>
+				<img src="img/coverflow/maroon5-handsallover.jpg" data-artist="Maroon 5" data-album="Hands All Over"/>
+				<img src="img/coverflow/mychemicalromance-dangerdays.jpg" data-artist="My Chemical Romance" data-album="Danger Days"/>
+				<img src="img/coverflow/ironmaiden-thefinalfrontier.jpg" data-artist="Iron Maiden" data-album="The Final Frontier"/>
+				<img src="img/coverflow/order of the black - black label society.jpg" data-artist="Order Of The Black" data-album="Black Label Society"/>	
+				<img src="img/coverflow/usher-raymondvraymond.jpg" data-artist="Usher" data-album="Raymond V Raymond"/>
+			</div>
+		</div>
+
+		<div id="imageCaption">
+		Sample Text
+		</div>
+
+
+		<div id='slider'></div>
+		</div>
+
+
+		<div class="demo-description">
+		</div>
+
+		<div class="listholder">
+		<div id="scroll-pane">
+		    <ul id="sortable"> 
+		    </ul>
+		</div>
+
+		<div id="slider-wrap">
+		<div id="slider-vertical"></div>
+	</div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+/*General sitewide styles*/
+/*IE is a bitch*/
+html,body{
+	height:100%;
+}
+ul.services {
+	-pie-background:linear-gradient(45deg,#FFD867, #FFE6A4); /*PIE*/
+	behavior:url(/css/PIE.htc);
+}
+
+
+	
